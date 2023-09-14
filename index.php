@@ -8,7 +8,9 @@
     <title>INDEX</title>
 </head>
 <body>
-   <?php include("../partes/nav.php");?>
+   <?php include("partes/nav.php");?>
 <script src="bootstrap.js"></script>
+
+
 </body>
 </html>

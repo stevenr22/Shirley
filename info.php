@@ -10,68 +10,67 @@
 </head>
 
 <body>
-    <?php include("../partes/nav.php");?>
+    <?php include("partes/nav.php");?>
     <div class="container-fluid">
         <div class="card-header">
             <h2><b>Registre datos: </b></h2>
         </div>
         <div class="card-body">
-            <form>
+            <form method="post" action="registro/validar_regis.php">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Nombre: </label>
-                                <input type="text" class="form-control" placeholder="Ingrese su nombre" name="" id="">
+                                <input type="text" class="form-control" placeholder="Ingrese su nombre" name="inom" id="inom">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Apellido: </label>
-                                <input type="text" class="form-control" placeholder="Ingrese su apellido" name="" id="">
+                                <input type="text" class="form-control" placeholder="Ingrese su apellido" name="inape" id="inape">
                             </div>
                         </div>
                     </div>
                     <br>
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="">Numero: </label>
-                                <input type="number" class="form-control" placeholder="Ingrese su numero" name="" id="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="">Correo: </label>
-                                <input type="email" class="form-control" placeholder="Ingrese su email" name="" id="">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
+                    
+             
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Cedula: </label>
-                                <input type="text" class="form-control" placeholder="Ingrese su cedula" name="" id="">
+                                <input type="text" class="form-control" placeholder="Ingrese su cedula" name="inced" id="inced">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Edad: </label>
-                                <input type="text" class="form-control" placeholder="Ingrese su edad" name="" id="">
+                                <input type="text" class="form-control" placeholder="Ingrese su edad" name="ined" id="ined">
                             </div>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Fecha de registro: </label>
+                                <input type="date" class="form-control" placeholder="Ingrese la fecha" name="infech" id="Infech">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><br>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+
                 </div>
             </form>
         </div>
-        <div class="card-footer">
-            <input type="button" class="btn btn-primary" value="Registrar">
-
-        </div>
+        
     </div>
 
     <script src="bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
