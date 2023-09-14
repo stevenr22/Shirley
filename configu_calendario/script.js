@@ -14,24 +14,38 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(data => {
                 daysContainer.innerHTML = data;
-                setupDayClickHandlers(); // Vuelve a configurar los manejadores de clic
+                setupDayClickHandlers();
             });
     });
 
     function setupDayClickHandlers() {
         const days = document.querySelectorAll('.calendario-day');
-
         days.forEach(day => {
             day.addEventListener('click', function() {
                 const selectedDay = this.getAttribute('data-day');
-                modalContent.innerHTML = `Información del día ${selectedDay}`;
-                $('#myModal').modal('show');
+            
+                fetch(`enviar_info.php?day=${selectedDay}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        $('#myModal').modal('show'); // Mostrar el modal primero
+            
+                        $('#myModal').on('shown.bs.modal', function () {
+                            console.log('Modal abierto');
+                            document.getElementById('inom').value = data.nombre_usu;
+                            console.log(document.getElementById('inom'));
+                            document.getElementById('inape').value = data.apellido_usu;
+                            console.log(document.getElementById('inape'));
+                            document.getElementById('inced').value = data.ced;
+                            console.log(document.getElementById('inced'));
+                            document.getElementById('ined').value = data.edad;
+                            console.log(document.getElementById('ined'));
+                            document.getElementById('infech').value = data.fecha_regis_usu;
+                            console.log(document.getElementById('infech'));
+                        });
+                    });
             });
-
-            day.style.cursor = 'pointer';
         });
     }
 
-    // Configura los manejadores de clic al cargar la página
-    setupDayClickHandlers();
+    setupDayClickHandlers(); // Llamamos a la función para configurar los manejadores de clic al cargar la página
 });

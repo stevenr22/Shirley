@@ -54,7 +54,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Fecha de registro: </label>
-                                <input type="date" class="form-control" placeholder="Ingrese la fecha" name="infech" id="Infech">
+                                <input type="date" class="form-control" placeholder="Ingrese la fecha" name="infech" id="infech">
                             </div>
                         </div>
                         
@@ -70,7 +70,9 @@
     </div>
 
     <script src="bootstrap.js"></script>
+    <script src="bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="configu_calendario/script.js"></script>
 </body>
 
 </html>
