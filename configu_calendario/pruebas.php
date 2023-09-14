@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Calendario con PHP</title>
     
 </head>
 <body>
     <div class="controls">
-        <form id="dateForm">
+        <form id="dateForm" >
             <label for="month">Mes:</label>
             <select name="month" id="month">
                 <?php
