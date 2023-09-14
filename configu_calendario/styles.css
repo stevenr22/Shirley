@@ -1,0 +1,29 @@
+
+.calendario-day {
+    cursor: pointer;
+}
+
+.calendario-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Añade espacio entre los controles y la tabla */
+}
+
+.calendario-table th,
+.calendario-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendario-table th {
+    background-color: #f0f0f0;
+}
+
+.calendario-table td.calendario-day {
+    cursor: pointer;
+}
+
+.calendario-table td.calendario-day:hover {
+    background-color: #e0e0e0;
+}
