@@ -15,16 +15,10 @@
         <div class="card-header">
             <h2><b>CALENDARIO</b></h2>
         </div>
-        <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <label>Ingrese la fecha x: </label>
-                    <input type="date" class="form-control">
-                </div>
-            </form>
-        </div>
-        <div class="card-footer">
-            <input type="button" class="btn btn-primary" value="Registrar">
+        <div class="container">
+           <div class="card bg-dark">
+            adf
+           </div>
         </div>
     </div>
 <br><br>
@@ -84,7 +78,7 @@
     </div>
 
     <script src="bootstrap.js"></script>
-    <script src="misfunciones.js"></script>
+    <script src="calendario.js"></script>
 </body>
 
 </html>
